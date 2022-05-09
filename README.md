@@ -25,3 +25,5 @@ docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWOR
 5. /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
 6. /usr/local/pgsql/bin/createdb test
 7. /usr/local/pgsql/bin/psql test
+
+. /usr/local/pgsql/data/   :  Editar el archivo postgresql.conf, cambiar liten adressess="localhost" por "*"
