@@ -17,7 +17,7 @@ docker run -d --rm --name postgres -e POSTGRES_PASSWORD=pass -p 5432:5432 postgr
 El contenedor de Server_Postgres, se levanta, pero no corre en 2do plano
 docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=root -e POSTGRES_DB=my_store -p 5432:5432 katarro/server_postgres
 
-/usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
-/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
-/usr/local/pgsql/bin/createdb test
-/usr/local/pgsql/bin/psql test
+1. /usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
+2. /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+3. /usr/local/pgsql/bin/createdb test
+4. /usr/local/pgsql/bin/psql test
