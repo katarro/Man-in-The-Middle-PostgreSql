@@ -15,4 +15,5 @@ docker run -d --rm --name postgres -e POSTGRES_PASSWORD=pass -p 5432:5432 postgr
 -p:     Seleccionamos un puerto.
 
 El contenedor de Server_Postgres, se levanta, pero no corre en 2do plano
-docker run -it -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=root -e POSTGRES_DB=my_store -p 5432:5432 katarro/server_postgres
+docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=root -e POSTGRES_DB=my_store -p 5432:5432 katarro/server_postgres
+
