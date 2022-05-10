@@ -27,3 +27,4 @@ docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWOR
 7. /usr/local/pgsql/bin/psql test
 
 . /usr/local/pgsql/data/   :  Editar el archivo postgresql.conf, cambiar liten adressess="localhost" por "*"
+. docker run -it --link server_postgres:postgres dencold/pgcli
