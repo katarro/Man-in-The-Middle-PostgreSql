@@ -1,22 +1,26 @@
 # Tarea_Redes
 
-1. Se creó correctamente la imagen de postgres desde el dockerfile.
-2. Esta imagen se subió a docker.hub con la siguiente imagen, "docker pull katarro/server_postgres"
-3. Se creó un docker-compose, en el está la configuración de docker y montando la imagen anterior.
-4. Al ejecutar el comando para levantar el contenedor, este no se levanta.
-5. Comando: docker-compose up -d postgres
+Servidor
 
-Una vez instalada la imagen de docker, correr el siguiente comando:
-docker run -d --rm --name postgres -e POSTGRES_PASSWORD=pass -p 5432:5432 postgres
--d:     Ejecuta en segundo plano.
---rm:   Hace que cuando salgamos del contenedor, éste se elimine y no ocupe espacio en nuestro disco.
+1. Entrar en la carpeta "Servidor".
+2. Abrir una terminal en ese directorio.
+3. Ejecutar el siguiente código para construir la imagen del servidor de Postgres.
+. sudo docker build -t server_ postgres .
+4. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del servidor de Postgres.
+$.docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=root -e POSTGRES_DB=my_store -p 5432:5432 server_postgres
+
+Cliente
+1. Entrar en la carpeta "Cliente".
+2. Abrir una terminal en ese directorio.
+3. Ejecutar el siguiente código para construir la imagen del cliente de Postgres.
+#  sudo docker build -t cliente_postgres
+4. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del cliente de Postgres al mismo tiene que se inicia la conexión al servidor.
+#  sudo docker run -it --link server_postgres:server_postgres cliente_postgres
+
 --name: Nos permite asignarle un nombre a nuestro contenedor.
 -e:     Es para pasarle al contenedor variables de entorno.
 -p:     Seleccionamos un puerto.
 
-El contenedor de Server_Postgres, se levanta, pero no corre en 2do plano
-
-docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=root -e POSTGRES_DB=my_store -p 5432:5432 katarro/server_postgres
 
 1. mkdir /usr/local/pgsql/data
 2.    chown postgres /usr/local/pgsql/data
@@ -27,4 +31,4 @@ docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWOR
 7. /usr/local/pgsql/bin/psql test
 
 . /usr/local/pgsql/data/   :  Editar el archivo postgresql.conf, cambiar liten adressess="localhost" por "*"
-. docker run -it --link server_postgres:postgres dencold/pgcli
+
