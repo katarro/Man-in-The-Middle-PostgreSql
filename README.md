@@ -1,5 +1,7 @@
 # Tarea_Redes
 
+
+
 # Servidor
 1. Entrar en la carpeta "Servidor".
 2. Abrir una terminal en ese directorio.
@@ -20,6 +22,8 @@
 16. */usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
 17. */usr/local/pgsql/bin/createdb test*
 18. */usr/local/pgsql/bin/psql test*
+
+
 
 
 # Cliente
