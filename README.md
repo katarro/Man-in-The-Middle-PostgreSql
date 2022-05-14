@@ -15,10 +15,11 @@
 11. *cd /usr/local/pgsql/data/*
 12. *vim postgresql.conf*
 13. Cambiar: "listen_addresses='localhost'" -> "listen_addresses='*'" (salir del editor)
-14. Cambiar: "host all  all    127.0.0.1/32  trust" -> "host all  all    0.0.0.0/0  md5" (salir del editor)
-15. */usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
-16. */usr/local/pgsql/bin/createdb test*
-17. */usr/local/pgsql/bin/psql test*
+14. *vim pg_hba.conf*
+15. Cambiar: "host all  all    127.0.0.1/32  trust" -> "host all  all    0.0.0.0/0  md5" (salir del editor)
+16. */usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
+17. */usr/local/pgsql/bin/createdb test*
+18. */usr/local/pgsql/bin/psql test*
 
 
 # Cliente
