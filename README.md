@@ -13,7 +13,7 @@ Cliente
 1. Entrar en la carpeta "Cliente".
 2. Abrir una terminal en ese directorio.
 3. Ejecutar el siguiente código para construir la imagen del cliente de Postgres.
-4  *sudo docker build -t cliente_postgres*
+4. *sudo docker build -t cliente_postgres*
 5. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del cliente de Postgres al mismo tiene que se inicia la conexión al servidor.
 6. *sudo docker run -it --link server_postgres:server_postgres cliente_postgres*
 
