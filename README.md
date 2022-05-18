@@ -22,11 +22,13 @@
 16. *# /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
 17. *# /usr/local/pgsql/bin/createdb test*
 18. *# /usr/local/pgsql/bin/psql test*
-19. Crear contraseña para la base de datos
-20. *# \password*
-21. Ingresar contraseña...
-22. 
-# Servidor
+
+# Crear Contraseña
+20. Crear contraseña para la base de datos
+21. *# \password*
+22. Ingresar contraseña...
+
+# Ingresar Datos en Servidor
 24. Para ver la conexión, es necesario crear datos, y se harán mediante los siguientes códigos:
 25. *# CREATE TABLE estudiantes (nombre varchar (50), edad int);*
 26. *# INSERT INTO estudiantes VALUES ('Ignacio',24);*
