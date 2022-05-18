@@ -10,6 +10,7 @@
 5. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del servidor de Postgres.
 6. *sudo docker run -it --name server_postgres -p 5432:5432 server_postgres*    
 
+# Dentro del contenedor
 7.  *# mkdir /usr/local/pgsql/data*
 8.  *# chown postgres /usr/local/pgsql/data*
 9.  *# su - postgres*
@@ -19,9 +20,11 @@
 13. Cambiar: "listen_addresses='localhost'" -> "listen_addresses='*'" (salir del editor)
 14. *# vim pg_hba.conf*
 15. Cambiar: "host all  all    127.0.0.1/32  trust" -> "host all  all    0.0.0.0/0  md5" (salir del editor)
-16. *# /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
-17. *# /usr/local/pgsql/bin/createdb test*
-18. *# /usr/local/pgsql/bin/psql test*
+
+# Creación Base de Datos
+17. *# /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
+18. *# /usr/local/pgsql/bin/createdb test*
+19. *# /usr/local/pgsql/bin/psql test*
 
 # Crear Contraseña
 20. Crear contraseña para la base de datos
