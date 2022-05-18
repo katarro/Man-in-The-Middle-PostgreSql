@@ -25,6 +25,10 @@
 19. Crear contraseña para la base de datos
 20. *# \password*
 21. Ingresar contraseña...
+22. #
+23. Para ver la conexión, es necesario crear datos, y se harán mediante los siguientes códigos:
+24. *# CREATE TABLE estudiantes (nombre varchar (50), edad int);*
+25. *# INSERT INTO estudiantes VALUES ('Ignacio',24);*
 
 
 
@@ -33,9 +37,12 @@
 1. Entrar en la carpeta "Cliente".
 2. Abrir una terminal en ese directorio.
 3. Ejecutar el siguiente código para construir la imagen del cliente de Postgres.
-4. *sudo docker build -t cliente_postgres*
-5. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del cliente de Postgres al mismo tiene que se inicia la conexión al servidor.
-6. *sudo docker run -it cliente_postgres*
+4. *# sudo docker build -t cliente_postgres*
+5. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del cliente de Postgres.
+6. *# sudo docker run -it --rm cliente_postgres bash*
+7. Dentro del contenedor de pgcli, ejecutar el siguiente comando.
+8. pgcli 'postgresql://postgres:postgres@172.17.0.2:5432/test'
+9. *# select * from estudiantes*
 
 
 
