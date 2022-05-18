@@ -25,10 +25,11 @@
 19. Crear contraseña para la base de datos
 20. *# \password*
 21. Ingresar contraseña...
-22. #
-23. Para ver la conexión, es necesario crear datos, y se harán mediante los siguientes códigos:
-24. *# CREATE TABLE estudiantes (nombre varchar (50), edad int);*
-25. *# INSERT INTO estudiantes VALUES ('Ignacio',24);*
+22. 
+23. #Ingresar Datos en Servidor
+24. Para ver la conexión, es necesario crear datos, y se harán mediante los siguientes códigos:
+25. *# CREATE TABLE estudiantes (nombre varchar (50), edad int);*
+26. *# INSERT INTO estudiantes VALUES ('Ignacio',24);*
 
 
 
