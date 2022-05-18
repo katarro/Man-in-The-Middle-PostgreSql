@@ -8,7 +8,7 @@
 3. Ejecutar el siguiente código para construir la imagen del servidor de Postgres.  
 4. *sudo docker build -t server_postgres .*
 5. Ejecutar el siguiente comando para ejecutar el contenedor con la imagen del servidor de Postgres.
-6. *sudo docker run -it --name server_postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=root -e POSTGRES_DB=my_store -p 5432:5432 server_postgres*    
+6. *sudo docker run -it --name server_postgres -p 5432:5432 server_postgres*    
 
 7. *mkdir /usr/local/pgsql/data*
 8. *chown postgres /usr/local/pgsql/data*
