@@ -22,6 +22,9 @@
 16. */usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start*
 17. */usr/local/pgsql/bin/createdb test*
 18. */usr/local/pgsql/bin/psql test*
+19. Crear contraseña para la base de datos
+20. *# \password*
+21. Ingresar contraseña...
 
 
 
